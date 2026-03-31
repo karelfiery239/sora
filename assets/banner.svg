@@ -1,0 +1,220 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" fill="none">
+  <defs>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="starglow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="orb" x="-200%" y="-200%" width="500%" height="500%">
+      <feGaussianBlur stdDeviation="50"/>
+    </filter>
+    <filter id="orbsmall" x="-200%" y="-200%" width="500%" height="500%">
+      <feGaussianBlur stdDeviation="25"/>
+    </filter>
+
+    <!-- Sky gradient - deep to deeper -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#080a10"/>
+      <stop offset="40%" stop-color="#0e1018"/>
+      <stop offset="100%" stop-color="#14161e"/>
+    </linearGradient>
+
+    <!-- Horizon glow -->
+    <linearGradient id="horizon" x1="0" y1="400" x2="0" y2="280" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#80c8e0" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#80c8e0" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Sora kanji brush stroke style -->
+    <clipPath id="rounded">
+      <rect width="900" height="400" rx="12"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background sky -->
+  <rect width="900" height="400" rx="12" fill="url(#sky)"/>
+  <rect width="900" height="400" rx="12" fill="url(#horizon)"/>
+
+  <!-- Floating orbs - blurred colored spheres in background -->
+  <circle cx="180" cy="140" r="80" fill="#80c8e0" opacity="0.025" filter="url(#orb)">
+    <animate attributeName="cx" values="180;200;180" dur="20s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="140;155;140" dur="15s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="720" cy="180" r="60" fill="#b0a0d8" opacity="0.02" filter="url(#orb)">
+    <animate attributeName="cx" values="720;700;720" dur="18s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="180;165;180" dur="22s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="450" cy="100" r="50" fill="#d4b878" opacity="0.015" filter="url(#orb)">
+    <animate attributeName="cy" values="100;115;100" dur="16s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="600" cy="300" r="40" fill="#d0909c" opacity="0.015" filter="url(#orbsmall)">
+    <animate attributeName="cx" values="600;615;600" dur="14s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Star field - layered depths -->
+  <g filter="url(#starglow)">
+    <!-- Distant dim stars -->
+    <circle cx="48" cy="35" r="0.5" fill="#c8d0e0" opacity="0.3"/>
+    <circle cx="130" cy="18" r="0.4" fill="#c8d0e0" opacity="0.25"/>
+    <circle cx="240" cy="45" r="0.5" fill="#c8d0e0" opacity="0.2"/>
+    <circle cx="370" cy="25" r="0.4" fill="#c8d0e0" opacity="0.3"/>
+    <circle cx="490" cy="50" r="0.5" fill="#c8d0e0" opacity="0.2"/>
+    <circle cx="590" cy="15" r="0.4" fill="#c8d0e0" opacity="0.25"/>
+    <circle cx="680" cy="40" r="0.5" fill="#c8d0e0" opacity="0.3"/>
+    <circle cx="810" cy="22" r="0.4" fill="#c8d0e0" opacity="0.2"/>
+    <circle cx="870" cy="55" r="0.5" fill="#c8d0e0" opacity="0.25"/>
+    <circle cx="95" cy="75" r="0.4" fill="#c8d0e0" opacity="0.2"/>
+    <circle cx="750" cy="70" r="0.4" fill="#c8d0e0" opacity="0.25"/>
+    <circle cx="430" cy="65" r="0.3" fill="#c8d0e0" opacity="0.2"/>
+    <circle cx="300" cy="80" r="0.4" fill="#c8d0e0" opacity="0.15"/>
+    <circle cx="560" cy="72" r="0.3" fill="#c8d0e0" opacity="0.2"/>
+
+    <!-- Medium twinkling stars -->
+    <circle cx="78" cy="52" r="0.8" fill="#c8d0e0">
+      <animate attributeName="opacity" values="0.2;0.7;0.2" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="205" cy="30" r="0.7" fill="#c8d0e0">
+      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="340" cy="58" r="0.6" fill="#80c8e0">
+      <animate attributeName="opacity" values="0.3;0.9;0.3" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="520" cy="38" r="0.7" fill="#c8d0e0">
+      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="650" cy="28" r="0.8" fill="#c8d0e0">
+      <animate attributeName="opacity" values="0.5;0.9;0.5" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="780" cy="48" r="0.6" fill="#b0a0d8">
+      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="3.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="155" cy="68" r="0.5" fill="#c8d0e0">
+      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="840" cy="38" r="0.7" fill="#c8d0e0">
+      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="4.5s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Bright accent stars - colored -->
+    <circle cx="420" cy="42" r="1" fill="#d4b878">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="1;1.3;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="55" r="0.8" fill="#d0909c">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="260" cy="20" r="0.9" fill="#90c8a0">
+      <animate attributeName="opacity" values="0.4;0.9;0.4" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Main "north star" - bright cyan beacon at top center -->
+  <circle cx="450" cy="32" r="2" fill="#80c8e0" filter="url(#starglow)">
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="2;2.5;2" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Cross flare on the star -->
+  <line x1="450" y1="22" x2="450" y2="42" stroke="#80c8e0" stroke-width="0.4" opacity="0.3">
+    <animate attributeName="opacity" values="0.15;0.4;0.15" dur="3s" repeatCount="indefinite"/>
+  </line>
+  <line x1="440" y1="32" x2="460" y2="32" stroke="#80c8e0" stroke-width="0.4" opacity="0.3">
+    <animate attributeName="opacity" values="0.15;0.4;0.15" dur="3s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- SORA title - large, spaced, ethereal -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="2s" fill="freeze"/>
+
+    <!-- Shadow/glow layer -->
+    <text x="450" y="175" text-anchor="middle" font-family="'SF Mono','JetBrains Mono','Fira Code','Cascadia Code',monospace" font-size="90" font-weight="700" letter-spacing="30" fill="#80c8e0" opacity="0.08" filter="url(#orb)">
+      SORA
+    </text>
+
+    <!-- Main text -->
+    <g filter="url(#glow)">
+      <text x="450" y="175" text-anchor="middle" font-family="'SF Mono','JetBrains Mono','Fira Code','Cascadia Code',monospace" font-size="90" font-weight="700" letter-spacing="30" fill="#80c8e0">
+        SORA
+      </text>
+    </g>
+  </g>
+
+  <!-- Japanese kanji - small, elegant -->
+  <text x="450" y="205" text-anchor="middle" font-family="'Hiragino Kaku Gothic Pro','Noto Sans JP','Yu Gothic',sans-serif" font-size="16" fill="#4a5468" opacity="0">
+    空
+    <animate attributeName="opacity" values="0;0.5" dur="1s" begin="1.5s" fill="freeze"/>
+  </text>
+
+  <!-- Thin separator -->
+  <line x1="340" y1="222" x2="560" y2="222" stroke="#80c8e0" stroke-width="0.5" stroke-linecap="round" opacity="0">
+    <animate attributeName="opacity" values="0;0.25" dur="1s" begin="1.8s" fill="freeze"/>
+  </line>
+
+  <!-- Tagline -->
+  <text x="450" y="245" text-anchor="middle" font-family="'SF Mono','JetBrains Mono','Fira Code',monospace" font-size="11" letter-spacing="5" fill="#4a5468" opacity="0">
+    A COLORSCHEME FOR NEOVIM
+    <animate attributeName="opacity" values="0;0.6" dur="0.8s" begin="2s" fill="freeze"/>
+  </text>
+
+  <!-- Color palette - horizontal strip with glow effect -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.8s" begin="2.5s" fill="freeze"/>
+
+    <!-- Palette bar background -->
+    <rect x="175" y="275" width="550" height="3" rx="1.5" fill="#14161e"/>
+
+    <!-- Colored segments flowing into each other -->
+    <rect x="175" y="275" width="70" height="3" rx="1.5" fill="#80c8e0" opacity="0.7">
+      <animate attributeName="opacity" values="0.5;0.8;0.5" dur="6s" begin="0s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="253" y="275" width="70" height="3" rx="1.5" fill="#b0a0d8" opacity="0.7">
+      <animate attributeName="opacity" values="0.5;0.8;0.5" dur="6s" begin="0.8s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="331" y="275" width="70" height="3" rx="1.5" fill="#90c8a0" opacity="0.7">
+      <animate attributeName="opacity" values="0.5;0.8;0.5" dur="6s" begin="1.6s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="409" y="275" width="70" height="3" rx="1.5" fill="#d0a888" opacity="0.7">
+      <animate attributeName="opacity" values="0.5;0.8;0.5" dur="6s" begin="2.4s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="487" y="275" width="70" height="3" rx="1.5" fill="#d4b878" opacity="0.7">
+      <animate attributeName="opacity" values="0.5;0.8;0.5" dur="6s" begin="3.2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="565" y="275" width="70" height="3" rx="1.5" fill="#d0909c" opacity="0.7">
+      <animate attributeName="opacity" values="0.5;0.8;0.5" dur="6s" begin="4s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="643" y="275" width="82" height="3" rx="1.5" fill="#78b8b0" opacity="0.7">
+      <animate attributeName="opacity" values="0.5;0.8;0.5" dur="6s" begin="4.8s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Labels under the bar -->
+    <text x="210" y="296" text-anchor="middle" font-family="'SF Mono','JetBrains Mono',monospace" font-size="7.5" fill="#4a5468">cyan</text>
+    <text x="288" y="296" text-anchor="middle" font-family="'SF Mono','JetBrains Mono',monospace" font-size="7.5" fill="#4a5468">purple</text>
+    <text x="366" y="296" text-anchor="middle" font-family="'SF Mono','JetBrains Mono',monospace" font-size="7.5" fill="#4a5468">sage</text>
+    <text x="444" y="296" text-anchor="middle" font-family="'SF Mono','JetBrains Mono',monospace" font-size="7.5" fill="#4a5468">peach</text>
+    <text x="522" y="296" text-anchor="middle" font-family="'SF Mono','JetBrains Mono',monospace" font-size="7.5" fill="#4a5468">gold</text>
+    <text x="600" y="296" text-anchor="middle" font-family="'SF Mono','JetBrains Mono',monospace" font-size="7.5" fill="#4a5468">rose</text>
+    <text x="684" y="296" text-anchor="middle" font-family="'SF Mono','JetBrains Mono',monospace" font-size="7.5" fill="#4a5468">teal</text>
+  </g>
+
+  <!-- Code snippet at bottom -->
+  <g opacity="0" transform="translate(225, 340)">
+    <animate attributeName="opacity" values="0;0.7" dur="0.8s" begin="3s" fill="freeze"/>
+    <text font-family="'SF Mono','JetBrains Mono','Fira Code',monospace" font-size="12">
+      <tspan fill="#b0a0d8" font-style="italic">const </tspan>
+      <tspan fill="#b4bcd0">sky </tspan>
+      <tspan fill="#8898b8">= </tspan>
+      <tspan fill="#b0a0d8" font-style="italic">await </tspan>
+      <tspan fill="#80c8e0">lookUp</tspan>
+      <tspan fill="#8490a8">(</tspan>
+      <tspan fill="#90c8a0">"sora"</tspan>
+      <tspan fill="#8490a8">, </tspan>
+      <tspan fill="#d4b878">90</tspan>
+      <tspan fill="#8490a8">)</tspan>
+    </text>
+  </g>
+
+  <!-- Bottom fade line -->
+  <line x1="0" y1="388" x2="900" y2="388" stroke="#80c8e0" stroke-width="0.3" opacity="0.1"/>
+</svg>
