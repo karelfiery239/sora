@@ -1,0 +1,159 @@
+<p align="center">
+  <img src="assets/banner.svg" alt="Sora" width="800"/>
+</p>
+
+<p align="center">
+  <b>空 - sky</b><br/>
+  <sub>A deep colorscheme for Neovim. Ethereal cyan. Muted accents. Near-black canvas.</sub>
+</p>
+
+<p align="center">
+  <a href="#installation">Install</a> &middot;
+  <a href="#configuration">Configure</a> &middot;
+  <a href="#palette">Palette</a> &middot;
+  <a href="#supported-plugins">Plugins</a> &middot;
+  <a href="#extras">Extras</a>
+</p>
+
+---
+
+<p align="center">
+  <img src="assets/preview.jpg" alt="Sora Preview" width="700" style="border: 2px solid #5EA8C9; border-radius: 8px;"/>
+</p>
+
+## Philosophy
+
+Sora sits between Tokyo Night's saturation and Lume's muted pastels. The background is near-black with a cool blue undertone, deep enough for OLED. Syntax colors are muted but readable - they don't compete with each other.
+
+The signature ethereal cyan (`#80c8e0`) for functions is lighter and softer than Tokyo Night's blue, cooler than Lume's lavender. A single warm accent - gold (`#d4b878`) for constants and numbers - acts like a star against the cool palette. That one warm point in a field of cool tones is what gives Sora its look.
+
+Eight named accents, each with a clear role. No neon, no Christmas tree.
+
+## Installation
+
+<details>
+<summary><b>lazy.nvim</b></summary>
+
+```lua
+{
+  "aejkatappaja/sora.nvim",
+  lazy = false,
+  priority = 1000,
+  opts = {},
+  config = function(_, opts)
+    require("sora").setup(opts)
+    vim.cmd("colorscheme sora")
+  end,
+}
+```
+
+</details>
+
+<details>
+<summary><b>packer.nvim</b></summary>
+
+```lua
+use {
+  "aejkatappaja/sora.nvim",
+  config = function()
+    require("sora").setup()
+    vim.cmd("colorscheme sora")
+  end,
+}
+```
+
+</details>
+
+<details>
+<summary><b>mini.deps</b></summary>
+
+```lua
+MiniDeps.add("aejkatappaja/sora.nvim")
+require("sora").setup()
+vim.cmd("colorscheme sora")
+```
+
+</details>
+
+## Configuration
+
+```lua
+require("sora").setup({
+  transparent = false,
+  italic_comments = true,
+
+  on_colors = function(colors)
+    -- colors.bg = "#000000"
+  end,
+
+  on_highlights = function(hl, colors)
+    -- hl.Normal = { fg = colors.fg, bg = "#000000" }
+  end,
+})
+```
+
+## Palette
+
+| Role       |                     Color                     | Hex       |
+| :--------- | :-------------------------------------------: | :-------- |
+| Background | ![](https://placehold.co/16x16/0e1018/0e1018) | `#0e1018` |
+| Foreground | ![](https://placehold.co/16x16/c8d0e0/c8d0e0) | `#c8d0e0` |
+| **Cyan**   | ![](https://placehold.co/16x16/80c8e0/80c8e0) | `#80c8e0` |
+| Purple     | ![](https://placehold.co/16x16/b0a0d8/b0a0d8) | `#b0a0d8` |
+| Sage       | ![](https://placehold.co/16x16/90c8a0/90c8a0) | `#90c8a0` |
+| Peach      | ![](https://placehold.co/16x16/d0a888/d0a888) | `#d0a888` |
+| Gold       | ![](https://placehold.co/16x16/d4b878/d4b878) | `#d4b878` |
+| Rose       | ![](https://placehold.co/16x16/d0909c/d0909c) | `#d0909c` |
+| Teal       | ![](https://placehold.co/16x16/78b8b0/78b8b0) | `#78b8b0` |
+| Steel      | ![](https://placehold.co/16x16/8898b8/8898b8) | `#8898b8` |
+
+## Supported Plugins
+
+Sora includes highlight groups for:
+
+- [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) / [blink.cmp](https://github.com/saghen/blink.cmp)
+- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
+- [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua) / [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim) / [oil.nvim](https://github.com/stevearc/oil.nvim)
+- [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) (built-in theme)
+- [mini.statusline](https://github.com/echasnovski/mini.statusline)
+- [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim) / [snacks.nvim](https://github.com/folke/snacks.nvim)
+- [which-key.nvim](https://github.com/folke/which-key.nvim)
+- [trouble.nvim](https://github.com/folke/trouble.nvim)
+- [lazy.nvim](https://github.com/folke/lazy.nvim) / [mason.nvim](https://github.com/williamboman/mason.nvim)
+- [noice.nvim](https://github.com/folke/noice.nvim) / [nvim-notify](https://github.com/rcarriga/nvim-notify)
+- [flash.nvim](https://github.com/folke/flash.nvim) / [fzf-lua](https://github.com/ibhagwan/fzf-lua)
+- [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim)
+- [dashboard-nvim](https://github.com/nvimdev/dashboard-nvim)
+- [treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)
+
+Full **Treesitter** and **LSP semantic token** support.
+
+### Lualine
+
+```lua
+require("lualine").setup({
+  options = { theme = "sora" },
+})
+```
+
+## Extras
+
+Sora everywhere:
+
+| App | File | Install |
+|:----|:-----|:--------|
+| [Ghostty](https://ghostty.org) | `extras/ghostty/sora` | `cp` to `~/.config/ghostty/themes/` |
+| [Kitty](https://sw.kovidgoyal.net/kitty/) | `extras/kitty/sora.conf` | `include` in `kitty.conf` |
+| [Alacritty](https://alacritty.org) | `extras/alacritty/sora.toml` | `import` in `alacritty.toml` |
+| [Vim](https://www.vim.org) | `extras/vim/sora.vim` | `cp` to `~/.vim/colors/` |
+| [Lazygit](https://github.com/jesseduffield/lazygit) | `extras/lazygit/sora.yml` | merge into `config.yml` |
+| [Delta](https://github.com/dandavison/delta) | `extras/delta/sora.gitconfig` | `include` in `.gitconfig` |
+| [fzf](https://github.com/junegunn/fzf) | `extras/fzf/sora.sh` | `source` in shell rc |
+| [Yazi](https://yazi-rs.github.io) | `extras/yazi/sora.toml` | `cp` to `~/.config/yazi/theme.toml` |
+| [btop](https://github.com/aristocratos/btop) | `extras/btop/sora.theme` | `cp` to `~/.config/btop/themes/` |
+| [Slack](https://slack.com) | `extras/slack/sora.txt` | paste in Slack sidebar theme |
+
+## License
+
+MIT
