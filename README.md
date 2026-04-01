@@ -7,6 +7,10 @@
 </p>
 
 <p align="center">
+  A dark Neovim colorscheme. Ethereal cyan, cool silver, deep OLED blacks.
+</p>
+
+<p align="center">
   <a href="#installation">Install</a> &middot;
   <a href="#configuration">Configure</a> &middot;
   <a href="#palette">Palette</a> &middot;
