@@ -146,6 +146,7 @@ Sora everywhere:
 
 | App | File | Install |
 |:----|:-----|:--------|
+| [Zed](https://zed.dev) | `extras/zed/sora.json` | Install from Zed extension store |
 | [Ghostty](https://ghostty.org) | `extras/ghostty/sora` | `cp` to `~/.config/ghostty/themes/` |
 | [Kitty](https://sw.kovidgoyal.net/kitty/) | `extras/kitty/sora.conf` | `include` in `kitty.conf` |
 | [Alacritty](https://alacritty.org) | `extras/alacritty/sora.toml` | `import` in `alacritty.toml` |
@@ -155,8 +156,24 @@ Sora everywhere:
 | [fzf](https://github.com/junegunn/fzf) | `extras/fzf/sora.sh` | `source` in shell rc |
 | [Yazi](https://yazi-rs.github.io) | `extras/yazi/sora.toml` | `cp` to `~/.config/yazi/theme.toml` |
 | [btop](https://github.com/aristocratos/btop) | `extras/btop/sora.theme` | `cp` to `~/.config/btop/themes/` |
+| [tmux](https://github.com/tmux/tmux) | `extras/tmux/sora.tmux.conf` | `source-file` in `tmux.conf` |
+| [tokyo-night-tmux](https://github.com/janoamaral/tokyo-night-tmux) | `extras/tmux/tokyo-night-tmux-sora.sh` | see [tmux](#tmux) below |
 | [Slack](https://slack.com) | `extras/slack/sora.txt` | paste in Slack sidebar theme |
 | [Firefox](https://www.mozilla.org/firefox/) | `extras/firefox/manifest.json` | zip and load via `about:debugging` |
+
+### tmux
+
+For a basic tmux setup, add to your `tmux.conf`:
+
+```bash
+source-file /path/to/sora.nvim/extras/tmux/sora.tmux.conf
+```
+
+If you use [tokyo-night-tmux](https://github.com/janoamaral/tokyo-night-tmux), paste the contents of `extras/tmux/tokyo-night-tmux-sora.sh` into the plugin's `src/themes.sh` (before the default `*)` case), then add to your `tmux.conf`:
+
+```bash
+set -g @tokyo-night-tmux_theme "sora"
+```
 
 ## License
 
