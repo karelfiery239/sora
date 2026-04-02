@@ -1,16 +1,8 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="Sora" width="800"/>
-</p>
-
-<p align="center">
-  <b>空</b>
-</p>
-
-<p align="center">
+  <img src="assets/header.svg" alt="Sora" width="800"/>
+  <br/><br/>
   A dark Neovim colorscheme. Ethereal cyan, cool silver, deep OLED blacks.
-</p>
-
-<p align="center">
+  <br/><br/>
   <a href="#installation">Install</a> &middot;
   <a href="#configuration">Configure</a> &middot;
   <a href="#palette">Palette</a> &middot;
@@ -21,7 +13,7 @@
 ---
 
 <p align="center">
-  <img src="assets/preview.jpg" alt="Sora Preview" width="700" style="border: 2px solid #5EA8C9; border-radius: 8px;"/>
+  <img src="assets/banner.svg" alt="Sora Preview" width="800"/>
 </p>
 
 ## Philosophy
